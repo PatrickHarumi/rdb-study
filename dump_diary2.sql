@@ -38,7 +38,7 @@ CREATE TABLE pages (
     write_date date,
     body text,
     user_name character varying(16),
-    user_gender character(1)
+    user_email_address text
 );
 
 
@@ -76,17 +76,17 @@ ALTER TABLE ONLY pages ALTER COLUMN id SET DEFAULT nextval('pages_id_seq'::regcl
 -- Data for Name: pages; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY pages (id, write_date, body, user_name, user_gender) FROM stdin;
-1	2021-02-25	よく寝た	山田寝太郎	男
-2	2021-02-26	昼寝した	山田寝太郎	男
-3	2021-02-26	今日は晴れでした	鈴木ひより	女
-4	2021-02-26	成長を感じる	石垣高雄	男
-5	2021-02-27	今日も成長した	石垣高雄	男
-6	2021-02-27	雨が降りました	鈴木ひより	女
-7	2021-02-28	寝すぎた	山田寝太郎	男
-8	2021-02-28	くもりでした	鈴木ひより	女
-9	2021-02-28	飛躍の一日だった	石垣高雄	男
-10	2021-02-28	2月は寝てた	山田寝太郎	男
+COPY pages (id, write_date, body, user_name, user_email_address) FROM stdin;
+1	2100-02-25	よく寝た	山田寝太郎	yamada@example.com
+2	2100-02-26	昼寝した	山田寝太郎	yamada@example.com
+3	2100-02-26	今日は晴れでした	鈴木ひより	hiyori@example.com
+4	2100-02-26	成長を感じる	石垣高雄	ishigaki_takao@example.com
+5	2100-02-27	今日も成長した	石垣高雄	ishigaki_takao@example.com
+6	2100-02-27	雨が降りました	鈴木ひより	hiyori@example.com
+7	2100-02-28	寝すぎた	山田寝太郎	yamada@example.com
+8	2100-02-28	くもりでした	鈴木ひより	hiyori@example.com
+9	2100-02-28	飛躍の一日だった	石垣高雄	ishigaki_takao@example.com
+10	2100-02-28	2月は寝てた	山田寝太郎	yamada@example.com
 \.
 
 
