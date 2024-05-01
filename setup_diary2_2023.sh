@@ -1,7 +1,7 @@
 #!/bin/sh
 PG_USER='postgres'
 DB_NAME='diary2'
-GH_PAGES="https://nnn-training.github.io/rdb-study/"
+GH_PAGES="https://PatrickHarumi.github.io/rdb-study/"
 SQL_DUMP="dump_${DB_NAME}_2023.sql"
 
 dropdb --if-exists "$DB_NAME"
